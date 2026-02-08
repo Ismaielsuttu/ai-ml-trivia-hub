@@ -3,11 +3,9 @@ import './App.css';
 
 function App() {
   const [facts, setFacts] = useState([]);
-
+  const apiUrl = 'http://ai-trivia-env.eba-nkhvmyhc.us-west-2.elasticbeanstalk.com/api/facts/';
   useEffect(() => {
-    // 1. Fetch data from Django API
-    // Note: If you deploy to Azure, change this URL to your Azure Backend URL.
-    fetch('http://127.0.0.1:8000/api/facts/') 
+    fetch(apiUrl) 
       .then(response => response.json())
       .then(data => setFacts(data))
       .catch(error => console.error('Error fetching data:', error));
