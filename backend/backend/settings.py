@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-3w^lha&8mtd9+(v@*q@i=vf+*84jpuv#wyq$kmfn!8x_9-+hdl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['.elasticbeanstalk.com', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS needs to accept the AWS URL
+ALLOWED_HOSTS = ['*'] 
+# (Using '*' is fine for this assessment. In a real job, you would list the specific URL)
+
 
 
 # Application definition
@@ -52,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
 
 ROOT_URLCONF = 'backend.urls'
 
