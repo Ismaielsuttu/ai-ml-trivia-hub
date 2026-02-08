@@ -1,0 +1,51 @@
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: #58a6ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.fact-container {
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.fact-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-left: 5px solid #2ea043;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.fact-card:hover {
+  transform: scale(1.02);
+  border-color: #58a6ff;
+}
+
+.fact-id {
+  font-size: 0.8rem;
+  color: #8b949e;
+  display: block;
+  margin-bottom: 8px;
+}
